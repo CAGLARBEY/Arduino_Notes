@@ -1,0 +1,17 @@
+  #define BUTTON 2     // Buton dijital pin 2'ye bağlı
+#define LED 13       // LED dijital pin 13'e bağlı
+
+void setup() {
+  pinMode(BUTTON, INPUT);   // Buton girişi olarak ayarlandı
+  pinMode(LED, OUTPUT);     // LED çıkışı olarak ayarlandı
+}
+
+void loop() {
+  int durum = digitalRead(BUTTON);  // Butonun durumu okunuyor
+
+  if (durum == HIGH) {
+    digitalWrite(LED, HIGH);  // Butona basılmışsa LED yanar
+  } else {
+    digitalWrite(LED, LOW);   // Basılmamışsa LED söner
+  }
+}
